@@ -167,6 +167,9 @@ TARGET_PER_MGR_ENABLED := true
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Properties
 TARGET_SYSTEM_PROP += device/lenovo/kuntao/system.prop
 
@@ -177,9 +180,6 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lenovo/kuntao/rootdir/etc/fstab.qcom
-
-# RIL
-TARGET_RIL_VARIANT := caf
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
